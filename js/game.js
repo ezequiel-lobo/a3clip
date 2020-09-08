@@ -50,34 +50,34 @@ function guessGame(){
                 win = true;
             }
             else{
-                swal('Wrong answer.');
+                swal('Oops...','Wrong answer.');
                 if(intentos === 1){
                     if(año < game[x]){
-                        swal('The number is higher.');
+                        swal('Clue','The number is higher.');
                     }
                     else if (año > game[x]){
-                        swal('The number is lower.');
+                        swal('Clue','The number is lower.');
                     }
                 }
                 else if (intentos === 2){
                     switch (game[x]) {
                         case 1969:
-                            swal('Apollo 11...');
+                            swal('Clue','Apollo 11...');
                             break;
                         case 1991:
-                            swal('Disolution of the USSR...');
+                            swal('Clue','Disolution of the USSR...');
                             break;
                         case 1973:
-                            swal('The death of Pablo Picasso...');
+                            swal('Clue','The death of Pablo Picasso...');
                             break;
                         case 1975:
-                            swal('45 + 40 * 50 - 70');
+                            swal('Clue','45 + 40 * 50 - 70');
                             break;
                         case 2016:
-                            swal('Donald Trump becomes president of the United States...');
+                            swal('Clue','Donald Trump becomes president of the United States...');
                             break;
                         case 2013:
-                            swal('The year Breaking Bad ended');
+                            swal('Clue','The year Breaking Bad ended');
                             break;
                         default:
                             break;
