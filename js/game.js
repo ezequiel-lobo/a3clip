@@ -5,14 +5,14 @@ var xmax = 6;
 var intentos = 0;
 var año;
 var win = false;
-function restartGame(){
-    location.reload();
-    return false;
-}
+
+// Vector con respuestas
 const game = [1969, 1991, 1973, 1975, 2016, 2013]
 
+// Genera un nro aleatorio entre 1-5 (tamaño del vector) y lo asigna al valor x cada vez que se ejecuta el script
 var x = Math.floor(Math.random() * (xmax - xmin) + xmin)
 
+// Dependiendo del valor asignado a x, se muestra una determinada imágen y titulo relacionado con la respuesta
 switch (x) {
     case 0:
         document.getElementById('album-cover').src='img/abbeyroad.jpg';
@@ -40,6 +40,13 @@ switch (x) {
         break;
     default:
         break;
+}
+
+
+// Recarga la página
+function restartGame(){
+    location.reload();
+    return false;
 }
 
 function guessGame(){
@@ -91,6 +98,7 @@ function guessGame(){
             swal('Enter a valid number');
         }
     }
+
     if(win == true){
         swal('Congratulations!', 'You won.', 'success');
         document.getElementById('txtAño').disabled = true;
