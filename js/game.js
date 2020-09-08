@@ -45,7 +45,7 @@ switch (x) {
 function guessGame(){
     año = document.getElementById('txtAño').value;
     if(intentos < 4){
-        if(año >= min && año <= max){
+        if(año >= min && año <= max && año != ""){
             if(año == game[x]){
                 win = true;
             }
